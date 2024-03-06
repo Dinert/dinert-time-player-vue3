@@ -4,6 +4,9 @@
 - 这是一个从0到1实现的时间轴播放器，除了时间格式化用了第三库dayjs以外，其它的都是使用纯源生的js实现的
 ## 效果
 ![image](/src/assets/gif/time-player.gif)
+
+## [预览地址](https://dinert.github.io/dinert-time-player-vue3/)
+
 ## 技术栈
 <a href="https://github.com/vuejs/vue/tree/v2.6.14">
   <img src="https://img.shields.io/badge/vue-2.16.4-brightgreen" alt="vue">
