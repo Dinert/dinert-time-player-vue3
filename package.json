@@ -77,6 +77,7 @@
     "时间轴",
     "时间播放器",
     "@dinert",
+    "@dinert/time-player-vue3",
     "@dinert/time-player"
   ],
   "files": [
