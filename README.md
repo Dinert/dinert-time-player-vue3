@@ -16,7 +16,6 @@
   <img src="https://img.shields.io/badge/dayjs-1.11.3-brightgreen" alt="vue">
 </a>
 
-
 ## 如何安装
 * 如果你使用npm
 ```shell
