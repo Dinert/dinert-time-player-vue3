@@ -5,11 +5,12 @@
 ## 效果
 ![image](/src/assets/gif/time-player.gif)
 
-## [预览地址](https://dinert.github.io/dinert-time-player-vue3/)
+### 预览地址
+[https://dinert.github.io/dinert-time-player-vue3/](https://dinert.github.io/dinert-time-player-vue3/)
 
 ## 技术栈
-<a href="https://github.com/vuejs/vue/tree/v2.6.14">
-  <img src="https://img.shields.io/badge/vue-2.16.4-brightgreen" alt="vue">
+<a href="https://github.com/vuejs/vue/tree/v3.3.4">
+  <img src="https://img.shields.io/badge/vue-3.3.4-brightgreen" alt="vue">
 </a>
 <a href="https://dayjs.gitee.io/zh-CN/">
   <img src="https://img.shields.io/badge/dayjs-1.11.3-brightgreen" alt="vue">
@@ -50,6 +51,47 @@ import '@dinert/time-player/style'
       DinertTimePlayer
     }
   }
+
+```
+## 使用
+```html
+
+<script setup lang="ts">
+import {ref, onMounted} from 'vue'
+import {DinertTimePlayer} from './components/index'
+const timePlayerRef = ref<InstanceType<typeof DinertTimePlayer>>()
+
+onMounted(() => {
+})
+
+const animateAfter = (config: any) => {
+    console.log(config, 'animateAfter')
+}
+</script>
+<template>
+    <div class="app">
+        <dinert-time-player ref="timePlayerRef" @animate-after="animateAfter"/>
+        <div class="button">
+            <button type="button" @click="timePlayerRef?.startPlay()">开始播放</button>
+            <button type="button" @click="timePlayerRef?.stopPlay()">停止播放</button>
+        </div>
+    </div>
+</template>
+<style lang="scss" scoped>
+
+.app {
+    margin-top: 80px;
+}
+
+.button {
+    margin: 20px auto;
+    text-align: center;
+
+    button {
+        margin-left: 20px;
+    }
+}
+</style>
 
 ```
 
