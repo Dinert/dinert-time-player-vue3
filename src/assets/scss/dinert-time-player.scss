@@ -1,0 +1,243 @@
+
+.dinert-time-player {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    border-radius: 3px;
+    background-color: rgb(0 0 0 / .7);
+    user-select: none;
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &-left {
+        display: flex;
+        width: 48px;
+        height: 100%;
+        flex-direction: column;
+
+        &-top {
+            position: relative;
+            height: 8px;
+            background-color: #409eff;
+        }
+
+        &-bottom {
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+
+            &-start {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -6px;
+                margin-left: -9px;
+                width: 0;
+                height: 0;
+                border: 6px solid;
+                border-color: #fff #fff transparent transparent;
+                transform: rotate(45deg);
+            }
+
+            &-start.stop {
+                margin-left: -6px;
+                width: 16px;
+                height: 12px;
+                border: none;
+                transform: rotate(0deg);
+            }
+
+            &-start.stop::before {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 12px;
+                background-color: #fff;
+            }
+
+            &-start.stop::after {
+                position: absolute;
+                margin-left: 10px;
+                width: 4px;
+                height: 12px;
+                background-color: #fff;
+                content: "";
+            }
+        }
+    }
+
+    &-center {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        &-top {
+            position: relative;
+            height: 8px;
+            background-color: rgb(255 255 255 / .7);
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &-bar {
+                background-image:
+                    linear-gradient(
+                        to right,
+                        #409eff,
+                        #6acaef
+                    );
+                height: 100%;
+                transition: all .3s;
+            }
+
+            &-tooltip {
+                transition: all .3s;
+            }
+
+            &-tooltip,
+            &-tooltipTemp {
+                position: absolute;
+                top: -35px;
+                padding: 0 8px;
+                min-width: 20px;
+                height: 24px;
+                font-size: 14px;
+                border-radius: 3px;
+                text-align: center;
+                white-space: nowrap;
+                color: #fff;
+                background-color: gray;
+                line-height: 24px;
+                transform: translateX(-50%);
+            }
+
+            &-tooltip::after,
+            &-tooltipTemp::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -8px;
+                border: 8px solid;
+                border-color: gray transparent transparent;
+            }
+
+            &-tooltipTemp {
+                background-color: #ccc;
+            }
+
+            &-tooltipTemp::after {
+                border-color: #ccc transparent transparent;
+            }
+
+            &-ul {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                height: 100%;
+
+                li {
+                    float: left;
+                    height: 100%;
+                    border-left: 1px solid #999;
+                    box-sizing: border-box;
+                }
+            }
+
+            &-ul::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        &-center {
+            height: 12px;
+            line-height: 12px;
+
+            &-ul {
+                height: 100%;
+
+                &-li {
+                    position: relative;
+                    float: left;
+                    height: 100%;
+                    border-bottom: 1px solid #999;
+                    border-left: 1px solid #999;
+                    box-sizing: border-box;
+
+                    span {
+                        position: absolute;
+                        font-size: 12px;
+                        color: #fff;
+                        transform: translateX(-50%) scale(.8);
+                    }
+
+                    span::after {
+                        position: absolute;
+                        top: -90%;
+                        left: 50%;
+                        width: 1px;
+                        height: 9px;
+                        background-color: #fff;
+                        content: "";
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            flex: 1;
+
+            &-ul {
+                height: 100%;
+
+                &-li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    float: left;
+                    height: 100%;
+                    font-size: 12px;
+                    border-left: 1px solid #999;
+                    color: #fff;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &-right {
+        position: relative;
+        width: 120px;
+        height: 100%;
+        border-left: 1px solid #999;
+
+        &-now {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 80px;
+            height: 28px;
+            font-size: 12px;
+            border-radius: 14px;
+            text-align: center;
+            color: #fff;
+            background-color: #409eff;
+            line-height: 28px;
+            cursor: pointer;
+        }
+
+        &-now:hover {
+            background-color: rgba(#409eff, .8);
+        }
+    }
+}

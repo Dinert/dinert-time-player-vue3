@@ -1,0 +1,86 @@
+{
+  "name": "@dinert/time-player-vue3",
+  "version": "1.0.42",
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/src/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./es/src/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./style": {
+      "import": "./es/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/eslint-plugin": "^7.23.5",
+    "@babel/plugin-transform-typescript": "^7.23.6",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/composition-api": "^1.7.2",
+    "dayjs": "^1.11.10",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.22.0",
+    "lint-staged": "^15.2.2",
+    "postcss": "8.4.31",
+    "postcss-html": "1.5.0",
+    "postcss-scss": "4.0.9",
+    "sass": "1.69.5",
+    "stylelint": "15.11.0",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "34.0.0",
+    "stylelint-order": "6.0.3",
+    "stylelint-scss": "5.3.1",
+    "typescript": "^5.2.2",
+    "vite": "4.5.0",
+    "vite-plugin-dts": "^3.7.3",
+    "vue": "3.3.4",
+    "vue-eslint-parser": "^9.4.2",
+    "vue-property-decorator": "^9.1.2"
+  },
+  "lint-staged": {
+    "*.{tsx, ts}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss,sass}": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.{html,vue}": [
+      "eslint --fix",
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "time-player",
+    "时间轴",
+    "时间播放器",
+    "@dinert",
+    "@dinert/time-player"
+  ],
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "repository": "git@github.com:Dinert/time-player.git",
+  "dependencies": {}
+}

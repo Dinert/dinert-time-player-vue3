@@ -1,0 +1,23 @@
+{
+    "editor.formatOnSave": false,
+    "eslint.validate": [
+      "javascript",
+      "vue",
+      "html",
+      "typescript",
+    ],
+    "editor.detectIndentation": false,
+    "files.trimTrailingWhitespace": true,
+    "stylelint.validate": [
+      "css",
+      "scss",
+      "sass",
+      "vue",
+      "html"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit"
+    },
+  "vue.codeActions.enabled": false
+  }
