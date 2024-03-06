@@ -19,11 +19,11 @@
 ## 如何安装
 * 如果你使用npm
 ```shell
-npm i @dienrt/time-player --save
+npm i @dinert/time-player-vue3 --save
 ```
 * 或者使用yarn
 ```shell
-yarn add @dinert/time-player
+yarn add @dinert/time-player-vue3
 ```
 
 ## 引入
@@ -31,8 +31,8 @@ yarn add @dinert/time-player
 // main.ts
 import { createApp } from 'vue'
 import App from './App.vue'
-import DinerTimePlayer from '@dinert/time-player'
-import '@dinert/time-player/style'
+import DinerTimePlayer from '@dinert/time-player-vue3'
+import '@dinert/time-player-vue3/style'
 
 const app = createApp(App)
 app.use(DinerTimePlayer)
@@ -42,8 +42,8 @@ app.mount('#app')
 
 ### 按需导入
 ```js
-import {DinertTimePlayer} from '@dinert/time-player'
-import '@dinert/time-player/style'
+import {DinertTimePlayer} from '@dinert/time-player-vue3'
+import '@dinert/time-player-vue3/style'
 
   <dinert-time-player></dinert-time-player>
   export default {
@@ -59,7 +59,7 @@ import '@dinert/time-player/style'
 
 <script setup lang="ts">
 import {ref, onMounted} from 'vue'
-import {DinertTimePlayer} from './components/index'
+import {DinertTimePlayer} from '@dinert/time-player-vue3'
 const timePlayerRef = ref<InstanceType<typeof DinertTimePlayer>>()
 
 onMounted(() => {

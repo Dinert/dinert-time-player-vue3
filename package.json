@@ -1,6 +1,6 @@
 {
   "name": "@dinert/time-player-vue3",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "type": "module",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -84,5 +84,10 @@
     "dist",
     "es",
     "lib"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dinert/dinert-time-player-vue3.git"
+  },
+  "homepage": "https://github.com/Dinert/dinert-time-player-vue3#readme"
 }
