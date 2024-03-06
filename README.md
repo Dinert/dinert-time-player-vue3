@@ -39,6 +39,7 @@ app.use(DinerTimePlayer)
 app.mount('#app')
 
 ```
+
 ### 按需导入
 ```js
 import {DinertTimePlayer} from '@dinert/time-player'
@@ -52,6 +53,7 @@ import '@dinert/time-player/style'
   }
 
 ```
+
 ## 使用
 ```html
 
