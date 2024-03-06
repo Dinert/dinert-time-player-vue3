@@ -2,7 +2,6 @@
 
 ## 前言
 - 这是一个从0到1实现的时间轴播放器，除了时间格式化用了第三库dayjs以外，其它的都是使用纯源生的js实现的
-- 支持vue2和vue3版本
 ## 效果
 ![image](/src/assets/gif/time-player.gif)
 ## 技术栈
@@ -25,25 +24,12 @@ yarn add @dinert/time-player
 ```
 
 ## 引入
-### vue2
-```js
-import Vue from 'vue'
-import App from './App.vue'
-import DinerTimePlayer from '@dinert/time-player'
-Vue.use(DinerTimePlayer)
-
-new Vue({
-    render: h => h(App)
-}).$mount('#app')
-
-```
-
-### vue3
 ```js
 // main.ts
 import { createApp } from 'vue'
 import App from './App.vue'
 import DinerTimePlayer from '@dinert/time-player'
+import '@dinert/time-player/style'
 
 const app = createApp(App)
 app.use(DinerTimePlayer)
@@ -52,7 +38,9 @@ app.mount('#app')
 ```
 ### 按需导入
 ```js
-  import DinertTimePlayer from '@dinert/time-player'
+import {DinertTimePlayer} from '@dinert/time-player'
+import '@dinert/time-player/style'
+
   <dinert-time-player></dinert-time-player>
   export default {
     components: {
