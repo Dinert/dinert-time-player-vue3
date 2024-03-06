@@ -78,6 +78,7 @@ export default defineConfig(({mode}) => {
 
     }
     if (mode === 'test') {
+        config.base = './'
         config.build = {}
     }
     return config
