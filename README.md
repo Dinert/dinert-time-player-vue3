@@ -19,11 +19,11 @@
 ## 如何安装
 * 如果你使用npm
 ```shell
-npm i @dinert/time-player-vue3 --save
+npm i @dinert/time-player-vue3 dayjs --save
 ```
 * 或者使用yarn
 ```shell
-yarn add @dinert/time-player-vue3
+yarn add @dinert/time-player-vue3 dayjs
 ```
 
 ## 引入
