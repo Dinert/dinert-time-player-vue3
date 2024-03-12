@@ -5,8 +5,70 @@
     width: 90%;
     height: 50px;
     border-radius: 3px;
-    background-color: rgb(0 0 0 / .7);
     user-select: none;
+    $bg-color: rgb(0 0 0 / .7);
+
+    background-color: $bg-color;
+
+    &.light {
+        $border-color: #d5d5d5;
+        $bg-color: #fff;
+
+        $player-color: $border-color;
+        $text-color: #656565;
+
+        background-color: $bg-color;
+
+        .dinert-time-player-center-top {
+            background-color: #e5e5e5;
+
+            .dinert-time-player-center-top-ul {
+                li {
+                    border-color: $border-color;
+                }
+            }
+        }
+
+        .dinert-time-player-left-bottom-start {
+            border-color: $player-color $player-color transparent transparent;
+
+            &::before,
+            &::after {
+                background-color: $player-color;
+            }
+        }
+
+        .dinert-time-player-center-center-ul-li {
+            border-color: $border-color;
+
+            span {
+                color: $text-color;
+
+                &::after {
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+
+        .dinert-time-player-center-bottom-ul-li {
+            border-color: $border-color;
+            color: $text-color;
+        }
+
+        .dinert-time-player-right {
+            border-color: $border-color;
+        }
+
+        .dinert-time-player-center-top-tooltip,
+        .dinert-time-player-center-top-tooltipTemp {
+            color: $text-color;
+            background-color: #fff;
+
+            &::after {
+                border-color: #fff transparent transparent;
+            }
+        }
+    }
 
     ul,
     li {
